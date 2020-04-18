@@ -4,7 +4,7 @@
 # author  dingjianmin
 #递归拷贝指定类型的文件
 #参数  源文件夹   目标文件夹   文件类型列表
-# <source_directory>  <dest_directory>
+# <source_directory>  <dest_directory> <type_list>
 
 import sys
 import os
@@ -17,7 +17,9 @@ def  make_directory(directory_s):
         pass
 
 class CopyEx:
+    #True  is move   other  is copy
     ismove=True
+    #the list of  file type
     dict_types = {}
     def copy_file_ex(self,srcFile,dstFile):
         stat_1 =None
